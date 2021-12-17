@@ -46,6 +46,7 @@ const restaurantSchema = mongoose.Schema({
     continental: reqBooleanF,
     fastFood: reqBooleanF,
     italian: reqBooleanF,
+    indian: reqBooleanF,
     seafood: reqBooleanF,
     thai: reqBooleanF,
     southeastAsian: reqBooleanF,
