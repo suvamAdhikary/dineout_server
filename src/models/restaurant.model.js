@@ -27,6 +27,7 @@ const restaurantSchema = mongoose.Schema({
     costForTwo: reqNumberT,
     img: [reqStringT],
     menuImg: [reqStringT],
+    bestSelling: [reqStringF],
     rating: reqNumberT,
     reviews: reqNumberT,
     city: reqStringT,
