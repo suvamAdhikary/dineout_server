@@ -38,7 +38,6 @@ const restaurantSchema = mongoose.Schema({
     petFriendly: reqBooleanF,
     newOnDineout: reqBooleanF,
     familyTime: reqBooleanF,
-    pureVeg: reqBooleanF,
     northIndian: reqBooleanF,
     bestBars: reqBooleanF,
     pureVeg: reqBooleanF,
