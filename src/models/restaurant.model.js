@@ -19,9 +19,15 @@ const reqNumberT = {
 }
 
 
-const userSchema = mongoose.Schema({
+const restaurantSchema = mongoose.Schema({
     name: reqStringT,
-    mobile: reqNumberT,
+    costForTwo: reqNumberT,
+    img: [reqStringT],
+    rating: reqNumberT,
+    reviews: reqNumberT,
+    cuisine: [reqStringT],
+    location1: reqStringT,
+    location2: reqStringF,
 }, {
     versionKey: false,
     timestamp: true,
@@ -29,6 +35,6 @@ const userSchema = mongoose.Schema({
 
 
 
-const User = mongoose.model("user", userSchema);
+const Restaurant = mongoose.model("restaurant", restaurantSchema);
 
-module.exports = User;
+module.exports = Restaurant;
