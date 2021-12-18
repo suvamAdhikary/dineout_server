@@ -19,9 +19,25 @@ const reqNumberT = {
 }
 
 
+const bookingSchema = mongoose.Schema({
+    guests: reqNumberT,
+    restaurantName: reqStringF,
+    city: reqStringF,
+    locality: reqStringF,
+    timeSlot: reqStringT,
+    date: reqStringT,
+    restaurantId: {type: mongoose.Schema.Types.ObjectId, ref: 'restaurant', required: false},
+}, {
+    versionKey: false,
+    timestamp: true,
+})
+
+
+
 const userSchema = mongoose.Schema({
     name: reqStringT,
     mobile: reqNumberT,
+    bookings: bookingSchema,
 }, {
     versionKey: false,
     timestamp: true,
