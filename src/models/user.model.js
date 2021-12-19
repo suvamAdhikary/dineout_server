@@ -36,7 +36,7 @@ const bookingSchema = mongoose.Schema({
 
 const userSchema = mongoose.Schema({
     name: reqStringT,
-    mobile: reqNumberT,
+    mobile: reqStringT,
     bookings: bookingSchema,
 }, {
     versionKey: false,
