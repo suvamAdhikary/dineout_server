@@ -13,5 +13,18 @@ router.get('/:id', crudController.getOne(User));
 router.patch('/:id', crudController.updateOne(User));
 router.delete('/:id', crudController.deleteOne(User));
 
+router.get('/mobile/:mobile', async () => {
+
+    try {
+        
+        const user = await User.findOne({mobile : req.params.mobile}).lean().exec();
+
+        return res.send(user);
+
+    } catch (err) {
+
+        res.send(err);
+    }
+})
 
 module.exports = router;
