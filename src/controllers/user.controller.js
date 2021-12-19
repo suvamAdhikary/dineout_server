@@ -13,7 +13,7 @@ router.get('/:id', crudController.getOne(User));
 router.patch('/:id', crudController.updateOne(User));
 router.delete('/:id', crudController.deleteOne(User));
 
-router.get('/mobile/:mobile', async () => {
+router.get('/mobiles/:mobile', async (req, res) => {
 
     try {
         
